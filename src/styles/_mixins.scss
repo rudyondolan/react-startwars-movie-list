@@ -1,0 +1,5 @@
+@mixin mobile-size {
+	@media screen and (max-width: $break-mobile) {
+		@content
+	}
+}

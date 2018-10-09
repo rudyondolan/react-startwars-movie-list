@@ -1,0 +1,50 @@
+.episode-list {
+	margin-top: 49px;
+
+	&__content {
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+		cursor: pointer;
+		padding: 50px;
+		list-style: none;
+		border-bottom: 1px solid white;
+		@for $i from 1 through length($colors) {
+			&:nth-child(#{$i}) {
+				background-color: nth($colors, $i);
+				&:hover {
+					background-color: darken(nth($colors, $i), 7%);
+					transition: all .3s ease;
+				}
+			}
+		}
+	}
+}
+
+.list-item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-weight: lighter;
+	color: white;
+
+	@include mobile-size {
+		flex-direction: column;
+	}
+
+	&__left {
+		font-size: 24px;
+		@include mobile-size {
+			padding: 4px 0px;
+		}
+	}
+
+	&__right {
+		font-size: 12px;
+		@include mobile-size {
+			padding: 4px 0px;
+		}
+	}
+}

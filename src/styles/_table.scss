@@ -1,0 +1,31 @@
+.table {
+	margin-top: 49px;
+	overflow: auto;
+
+	&__content {
+		color: white;
+		width: 100%;
+
+		@include mobile-size {
+			min-width: 750px;
+		}
+	}
+
+	&__row {
+		@for $i from 1 through length($colors) {
+			&:nth-child(#{$i}) {
+				background-color: nth($colors, $i);
+				&:hover {
+					background-color: darken(nth($colors, $i), 7%);
+					transition: all .3s ease;
+				}
+			}
+		}
+	}
+
+	&__row-item {
+		padding: 24px;
+		font-size: 24px;
+		font-weight: lighter;
+	}
+}

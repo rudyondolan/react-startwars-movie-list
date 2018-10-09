@@ -1,0 +1,23 @@
+@import "vars";
+@import "mixins";
+@import "global";
+@import "loader";
+@import "list";
+@import "header";
+@import "table";
+
+.about {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__title {
+		font-weight: lighter;
+	}
+
+	&__caption {
+		font-size: 16px;
+	}
+}
